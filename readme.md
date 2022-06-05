@@ -7,6 +7,6 @@ This Is a Repository for saving my progress and solutions for the course 'JavaSc
 ### Sections
 
 * **Section 1:** Initial setup for Windows and Linux
-* [**Section 2:** JavaScript Basics - For Beginners](https://github.com/fernandaorms/js-course/tree/master/Section2)
-* [**Section 3:** JavaScript - Programming Logic](https://github.com/fernandaorms/js-course/tree/master/Section3)
-* [**Section 4:** JavaScript Functions (Advanced)](https://github.com/fernandaorms/js-course/tree/master/Section4)
+* [**Section 2:** JavaScript Basics - For Beginners](https://github.com/fernandaorms/js-course/tree/master/Section02)
+* [**Section 3:** JavaScript - Programming Logic](https://github.com/fernandaorms/js-course/tree/master/Section03)
+* [**Section 4:** JavaScript Functions (Advanced)](https://github.com/fernandaorms/js-course/tree/master/Section04)
