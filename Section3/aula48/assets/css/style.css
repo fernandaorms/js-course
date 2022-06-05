@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 6, 8, 0.194);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form input, form label, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+form button {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form button:hover {
+   background: var(--primary-color-darker);
+}
+
+input {
+   font-size: 14px;
+   height: 40px;
+   padding: 5px 10px;
+   border-radius: 2px;
+   border: 1px solid #ccc;
+   margin-right: 5px;
+}
+
+button.btn-tarefa{
+   border: none;
+   background: rgba(47, 203, 0);
+   color: #fff;
+   font-size: 14px;
+   font-weight: 700;
+   height: 40px;
+   cursor: pointer;
+   padding: 0 15px;
+   border-radius: 2px;
+}
+
+button.btn-tarefa:hover {
+   box-shadow: 0 0 .5em rgb(47, 203, 0);
+}
+
+div.error {
+   margin: 5px 0 10px;
+}
+
+div.error span {
+   font-size: 12px;
+   font-weight: 600;
+   color: rgb(255, 0, 0);
+}
+
+div.tarefas ul li {
+   margin: 15px 0;
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+
+div.tarefas ul li::before {
+   content: '';
+   position: absolute;
+   top: calc(50% - 2px);
+   left: -20px;
+   width: 6px;
+   height: 6px;
+   border-radius: 50%;
+   background: rgb(17, 86, 102);
+
+}
+
+div.tarefas ul li > * {
+   display: block;
+}
+
+div.tarefas ul li span {
+   font-size: 16px;
+}
+
+div.tarefas ul li button {
+   margin-left: 15px;
+   cursor: pointer;
+   background: transparent;
+   border: none;
+   color: red;
+   font-size: 20px;
+   font-weight: 600;
+}
+
+div.tarefas ul li button:hover {
+   text-shadow: 0 0 .5em red;
+}

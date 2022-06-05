@@ -1,0 +1,1 @@
+# Different ways to declare a function
