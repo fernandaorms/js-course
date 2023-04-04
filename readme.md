@@ -11,3 +11,4 @@ This Is a Repository for saving my progress and solutions for the course 'JavaSc
 * [**Section 3:** JavaScript - Programming Logic](https://github.com/fernandaorms/js-course/tree/master/Section03)
 * [**Section 4:** JavaScript Functions (Advanced)](https://github.com/fernandaorms/js-course/tree/master/Section04)
 * [**Section 5:** JavaScript Arrays (Advanced)](https://github.com/fernandaorms/js-course/tree/master/Section05)
+* [**Section 6:** JavaScript Objects and Prototypes (Advanced)](https://github.com/fernandaorms/js-course/tree/master/Section06)
