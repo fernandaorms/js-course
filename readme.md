@@ -1,6 +1,6 @@
 # JavaScript and TypeScript - Basics to Advanced
 
-This Is a Repository for saving my progress and solutions for the course 'JavaScript and TypeScript - Basics to Advanced 2022' by Luiz Otávio Miranda.
+This Is a Repository for saving my progress and solutions for the course 'JavaScript and TypeScript - Basics to Advanced' by Luiz Otávio Miranda.
 
 **Take a look on [Course's official repository on GitHub](https://github.com/luizomf/curso-js).**
 
