@@ -15,8 +15,10 @@ class ValidateForm {
         const validFields = this.fieldsValidate();
         const validPasswords = this.passwordsValidate();
         
-        alert('Form sent!');
-        // this.form.submit();  // Submit Form
+        if(validFields && validPasswords) {
+            alert('Form sent!');
+            // this.form.submit();  // Submit Form
+        }   
     }
 
     passwordsValidate() {
