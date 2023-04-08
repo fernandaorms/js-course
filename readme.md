@@ -13,3 +13,4 @@ This Is a Repository for saving my progress and solutions for the course 'JavaSc
 * [**Section 5:** JavaScript Arrays (Advanced)](https://github.com/fernandaorms/js-course/tree/master/Section05)
 * [**Section 6:** JavaScript Objects and Prototypes (Advanced)](https://github.com/fernandaorms/js-course/tree/master/Section06)
 * [**Section 7:** JavaScript Classes - Object-oriented programming (OOP)](https://github.com/fernandaorms/js-course/tree/master/Section07)
+* [**Section 8:** JavaScript Async - Promises, Ajax, Fetch and Async/Await](https://github.com/fernandaorms/js-course/tree/master/Section08)
