@@ -1,10 +1,11 @@
 {
-  "name": "template",
+  "name": "class02",
   "version": "1.0.0",
   "description": "**Commands List:**",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -w"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "load": "webpack -w"
   },
   "author": "",
   "license": "ISC",
@@ -18,8 +19,6 @@
   },
   "dependencies": {
     "core-js": "^3.32.0",
-    "css-loader": "^6.8.1",
-    "regenerator-runtime": "^0.14.0",
-    "style-loader": "^3.3.3"
+    "regenerator-runtime": "^0.14.0"
   }
 }
