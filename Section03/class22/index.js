@@ -1,16 +1,7 @@
-/*
-Operadores Lógicos
-&& -> AND -> E -> Todas as expressões precisam ser verdadeiras para retornar true
-|| -> OR -> OU
-! -> NOT -> NÃO
-*/
-// const expressaoAnd = true && true && true && true;
-// const expressaoOr = false || false || false || false;
+// Inicial
+// const ePaisagem = (width, height) => width > height ? true : false;
 
-// const usuario = 'Luiz'; // form usuário digitou
-// const senha = '123456'; // form usuário digitou
+// Refatorando
+const ePaisagem = (width, height) => width >= height;
 
-// //                      True                  False
-// const vaiLogar = usuario === 'Luiz' && senha === '12345';
-
-console.log(!!true);
+console.log(ePaisagem(1920, 1080));

@@ -1,3 +1,1 @@
-# IMC
-
-Exercício para calcular o IMC
+# setInterval e setTimeout

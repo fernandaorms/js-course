@@ -1,20 +1,28 @@
-const numero = 10;
-
-// Se (numero >= 0 && numero <= 5) ocorrer, faça isso {código}
-// Se não faça isso {o código}
-
-if (numero <= 10) { // Verdadeira
-  console.log('O número é menor ou igual a 10.');
+function formatDate(date){
+    return date.toLocaleString('pt-BR', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hor12: false
+    });
 }
 
-if (numero >= 0 && numero <= 5) {
-  console.log('O número está entre 0 e 5.');
-} else if (numero >= 6 && numero <= 8) {
-  console.log('O número está entre 6 e 8.');
-} else if (numero >= 9 && numero <= 11) { // Verdadeiro
-  console.log('O número está entre 9 e 11.');
-} else {
-  console.log('O número não está entre 0 e 11.');
+function returnHour(date) {
+    if (date && !(date instanceof Date)) throw new TypeError('Not a Date instance');
+
+    if(!date) date = new Date();
+
+    return formatDate(date);
 }
 
-console.log('...Aqui vai o resto do código.');
+try{
+    const date = new Date('04-26-2022 20:20:59');
+    const hour = returnHour(date);
+    console.log(hour);
+} catch (e){
+    // Tratar erro
+    // console.log(e);
+    console.log('Tratar erro');
+} finally {
+    console.log('Tenha um bom dia');
+}
