@@ -1,0 +1,36 @@
+<%- include('includes/header'); %>
+
+<main>
+    <div class="container">
+        <h1>
+            <% if(typeof title !== 'undefined') { %>
+                <%= title %>
+            <% } else { %>
+                <%= localVariable %>
+            <% } %>
+        </h1>
+
+        <div class="clients mb-3 mt-3">
+            <% clients.forEach((element, key) => { %>
+                <div>
+                    <h3>Cliente <%= key %></h3>
+
+                    <span>Name: <%= element.fName %></span>
+                    <span>Email: <%= element.email %></span>
+                </div>
+            <% }); %>
+        </div>
+
+        <form action="/" method="post" class="mt-3">
+            <div class="mb-3">
+                <label for="inputName" class="form-label">Name</label>
+
+                <input type="text" name="inputName" id="inputName" class="form-control" placeholder=""/>
+            </div>
+            
+            <button class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</main>
+
+<%- include('includes/footer'); %>
