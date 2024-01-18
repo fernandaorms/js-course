@@ -1,33 +1,27 @@
 require('dotenv').config();
+const express = require('express');
+const mongoose = require('mongoose');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+const flash = require('connect-flash');
+const path = require('path');
+const routes = require('./routes');
+const { globalMiddleware } = require('./src/middlewares/middleware');
+
 const PORT = 3002;
 
-const express = require('express');
 const app = express();
 
-const mongoose = require('mongoose');
+
+// Config - Database Connection
 mongoose.connect(process.env.CONNECTIONSTR)
     .then(() => {
         app.emit('ready');
     })
     .catch(e => console.log(e));
 
-const routes = require('./routes');
-const path = require('path');
 
-const { globalMiddleware } = require('./src/middlewares/middleware');
-
-app.use(express.urlencoded({ extended: true }));
-
-app.use(express.static(path.resolve(__dirname, 'public')));
-
-app.set('views', path.resolve(__dirname, 'src', 'views'));
-app.set('view engine', 'ejs');
-
-
-const MongoStore = require('connect-mongo');
-const session = require('express-session');
-const flash = require('connect-flash');
-
+// Config - Express-Session and Flash
 app.use(
     session({
         secret: 'yourSecretKeyHere',
@@ -43,11 +37,18 @@ app.use(
 app.use(flash());
 
 
-// Custom Middlewares
+// Config - Express (Static, Views, Middlewares)
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.resolve(__dirname, 'public')));
+
+app.set('views', path.resolve(__dirname, 'src', 'views'));
+app.set('view engine', 'ejs');
+
 app.use(globalMiddleware);
 
-app.use(routes);
 
+// Config - Routes and Server Initialization
+app.use(routes);
 
 app.on('ready', () => {
     app.listen(PORT, () => {
