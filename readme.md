@@ -16,3 +16,4 @@ This Is a Repository for saving my progress and solutions for the course 'JavaSc
 * [**Section 8:** JavaScript Async - Promises, Ajax, Fetch and Async/Await](https://github.com/fernandaorms/js-course/tree/main/Section08)
 * [**Section 9:** JavaScript Tooling and ES6 Modules](https://github.com/fernandaorms/js-course/tree/main/Section09)
 * [**Section 10:** JavaScript - Node, Npm, Express and MongoDB (NodeJS)](https://github.com/fernandaorms/js-course/tree/main/Section10)
+* [**Section 11:** JavaScript + Node - Agenda project (Express and MongoDB)](https://github.com/fernandaorms/js-course/tree/main/Section11)
