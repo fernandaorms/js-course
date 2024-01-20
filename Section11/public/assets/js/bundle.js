@@ -32,16 +32,8 @@ body {
   padding: 0;
   background: #f5f5f5;
   font-family: 'Open sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5em;
-}
-
-.container {
-    max-width: 900px;
-    margin: 15px auto;
-    background: #fff;
-    padding: 54px 48px;
-    border-radius: 10px;
 }
 
 h1 {
@@ -51,45 +43,7 @@ h1 {
 label {
     margin-bottom: 0 !important;
 }
-
-.container > div {
-    margin: 32px 0;
-}
-
-.d-flex {
-    align-items: center;
-}
-
-.d-flex > *:first-child {
-    display: block;
-    width: 220px;
-}
-.d-flex > *:nth-child(2) {
-    flex: 1;
-}
-
-.options > div {
-    margin: 12px 0;
-}
-
-.button-generate {
-    margin-left: 220px !important;
-}
-
-input#generatedPassword {
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
-}
-
-input {
-    font-size: 1em !important;
-}
-
-.form-check {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/style.css"],"names":[],"mappings":"AAGA;EACE,sBAAsB;EACtB,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,UAAU;EACV,mBAAmB;EACnB,oCAAoC;EACpC,eAAe;EACf,kBAAkB;AACpB;;AAEA;IACI,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;IAChB,kBAAkB;IAClB,mBAAmB;AACvB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,2BAA2B;AAC/B;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,cAAc;IACd,YAAY;AAChB;AACA;IACI,OAAO;AACX;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,6BAA6B;AACjC;;AAEA;IACI,+BAA+B;IAC/B,kCAAkC;AACtC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,QAAQ;AACZ","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\n\n\n* {\n  box-sizing: border-box;\n  outline: 0;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: #f5f5f5;\n  font-family: 'Open sans', sans-serif;\n  font-size: 14px;\n  line-height: 1.5em;\n}\n\n.container {\n    max-width: 900px;\n    margin: 15px auto;\n    background: #fff;\n    padding: 54px 48px;\n    border-radius: 10px;\n}\n\nh1 {\n    font-size: 2em;\n}\n\nlabel {\n    margin-bottom: 0 !important;\n}\n\n.container > div {\n    margin: 32px 0;\n}\n\n.d-flex {\n    align-items: center;\n}\n\n.d-flex > *:first-child {\n    display: block;\n    width: 220px;\n}\n.d-flex > *:nth-child(2) {\n    flex: 1;\n}\n\n.options > div {\n    margin: 12px 0;\n}\n\n.button-generate {\n    margin-left: 220px !important;\n}\n\ninput#generatedPassword {\n    border-top-left-radius: 0.25rem;\n    border-bottom-left-radius: 0.25rem;\n}\n\ninput {\n    font-size: 1em !important;\n}\n\n.form-check {\n    display: flex;\n    align-items: center;\n    gap: 8px;\n}"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./frontend/assets/css/style.css"],"names":[],"mappings":"AAGA;EACE,sBAAsB;EACtB,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,UAAU;EACV,mBAAmB;EACnB,oCAAoC;EACpC,eAAe;EACf,kBAAkB;AACpB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,2BAA2B;AAC/B","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\n\n\n* {\n  box-sizing: border-box;\n  outline: 0;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: #f5f5f5;\n  font-family: 'Open sans', sans-serif;\n  font-size: 16px;\n  line-height: 1.5em;\n}\n\nh1 {\n    font-size: 2em;\n}\n\nlabel {\n    margin-bottom: 0 !important;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
