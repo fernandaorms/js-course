@@ -39,11 +39,6 @@ app.use(
 app.use(flash());
 
 
-// Config - Helmet, CSRF
-app.use(helmet());
-app.use(csrf());
-
-
 // Config - Express (Static, Views)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -51,6 +46,11 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
+
+
+// Config - Helmet, CSRF
+app.use(helmet());
+app.use(csrf());
 
 
 // Config - Middlewares
