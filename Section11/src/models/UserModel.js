@@ -16,20 +16,6 @@ class User {
         this.user = null;
     }
 
-    cleanUp() {
-        for(const key in this.body) {
-           if(typeof this.body[key] !== 'string') {
-                this.body[key] = '';
-           }
-        }
-
-        this.body = {
-            email: this.body.inputEmail,
-            password: this.body.inputPassword,
-            confirmPassword: this.body.inputConfirmPassword
-        }
-    }
-
     async register() {
         this.validate();
         if(this.errors.length > 0) return;
@@ -49,6 +35,20 @@ class User {
         if(user) this.errors.push('This email address is already registered.');
     }
 
+    cleanUp() {
+        for(const key in this.body) {
+           if(typeof this.body[key] !== 'string') {
+                this.body[key] = '';
+           }
+        }
+
+        this.body = {
+            email: this.body.inputEmail,
+            password: this.body.inputPassword,
+            confirmPassword: this.body.inputConfirmPassword
+        }
+    }
+    
     validate() {
         this.cleanUp();
 
@@ -65,7 +65,6 @@ class User {
         // And ConfirmPassword have to be the same
         if (this.body.password !== this.body.confirmPassword) this.errors.push('Your passwords do not match.');
     }
-
 }
 
 module.exports = User;
