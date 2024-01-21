@@ -16,8 +16,13 @@ class User {
         this.user = null;
     }
 
+    async login() {
+        await this.validateLogin();
+        if(this.errors.length > 0) return;
+    }
+
     async register() {
-        this.validate();
+        this.validateRegister();
         if(this.errors.length > 0) return;
 
         await this.userExists();
@@ -48,8 +53,25 @@ class User {
             confirmPassword: this.body.inputConfirmPassword
         }
     }
+
+    async validateLogin() {
+        this.cleanUp();
+
+        this.user = await UserModel.findOne({ email: this.body.email });
+
+        if(!this.user) {
+            this.errors.push('Invalid credentials.');
+            return;
+        }
+        
+        if(!bcryptjs.compareSync(this.body.password, this.user.password)) {
+            this.errors.push('Invalid credentials.');
+            this.user = null;
+            return;
+        }
+    }
     
-    validate() {
+    validateRegister() {
         this.cleanUp();
 
         // E-mail must be valid
