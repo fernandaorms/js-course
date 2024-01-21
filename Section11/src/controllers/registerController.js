@@ -1,4 +1,4 @@
-const Register = require('../models/RegisterModel');
+const User = require('../models/UserModel');
 const { login } = require('./loginController');
 
 exports.index = (req, res) => {
@@ -7,12 +7,12 @@ exports.index = (req, res) => {
 
 exports.register = async function(req, res) {
     try {
-        const register = new Register(req.body);
+        const user = new User(req.body);
 
-        await register.register();
+        await user.register();
     
-        if(register.errors.length > 0) {
-            req.flash('errors', register.errors);
+        if(user.errors.length > 0) {
+            req.flash('errors', user.errors);
     
             req.session.save(function() {
                 return res.redirect('/register');
@@ -26,7 +26,7 @@ exports.register = async function(req, res) {
             return res.redirect('/register');
         });
         return;
-        
+
     } catch(e) {
         console.log(e);
         res.render('404');
