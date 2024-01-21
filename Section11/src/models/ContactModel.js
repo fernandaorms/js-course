@@ -6,6 +6,7 @@ const ContactSchema = new mongoose.Schema({
     last_name: { type: String, required: false, default: '' },
     email: { type: String, required: false, default: '' },
     phone: { type: String, required: false, default: '' },
+    updated_date: { type: Date, default: null },
     created_date: { type: Date, default: Date.now },
     user: {
         type: mongoose.Schema.Types.ObjectId,
@@ -31,8 +32,19 @@ class Contact {
         this.contact = await ContactModel.create(this.body);
     }
 
+    async update(contact_id) {
+        if(!mongoose.Types.ObjectId.isValid(contact_id)) return;
+
+        this.validate();
+        if(this.errors.length > 0) return;
+
+        this.body.updated_date = Date.now();
+
+        this.contact = await ContactModel.findByIdAndUpdate(contact_id, this.body, { new: true });
+    }
+
     static async contactExists(contact_id) {
-        if (!mongoose.Types.ObjectId.isValid(contact_id)) return null;
+        if(!mongoose.Types.ObjectId.isValid(contact_id)) return;
         
         const contact = await ContactModel.findById(contact_id);
         return contact;
