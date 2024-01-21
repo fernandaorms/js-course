@@ -1,5 +1,4 @@
 const User = require('../models/UserModel');
-const { login } = require('./loginController');
 
 exports.index = (req, res) => {
     res.render('register');
