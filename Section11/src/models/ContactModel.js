@@ -81,8 +81,17 @@ class Contact {
     }
 
     static async getContactsByUserId(user_id) {
+        if(!mongoose.Types.ObjectId.isValid(user_id)) return;
+
         const contacts = await ContactModel.find({ user: user_id });
         return contacts;
+    }
+
+    static async delete(contact_id) {
+        if(!mongoose.Types.ObjectId.isValid(contact_id)) return;
+        
+        const contact = await ContactModel.findByIdAndDelete(contact_id);
+        return contact;
     }
 }
 

@@ -45,7 +45,7 @@
                                             <td><%= contact.email %></td>
                                             <td><%= contact.phone %></td>
                                             <td><a href='/contact/<%= contact._id %>'>Edit</a></td>
-                                            <td><a href='#' class='text-danger'>Delete</a></td>
+                                            <td><a href='/contact/delete/<%= contact._id %>' class='text-danger'>Delete</a></td>
                                         </tr>
                                     <% }); %>
                                 </table>
