@@ -10,28 +10,18 @@
                                 <h1>Agenda</h1>
                             </div>
 
-                            <div class='content'>
-                                <p>Take a look at this small agenda project to save contacts</p>
-                            </div>
+                            <% if(!user) { %>
+                                <div class='content'>
+                                    <p>Take a look at this small agenda project to save contacts</p>
+                                </div>
+                            <% } else { %>
+                                <div class='content'>
+                                    <p>Welcome to your contact's Agenda!</p>
+                                </div>
+                            <% } %> 
                         </div>
 
-                        <div class='flash-messages'>
-                            <div class='alert alert-primary' role='alert'>
-                                A simple primary alert—check it out!
-                            </div>
-
-                            <div class='alert alert-success' role='alert'>
-                                A simple success alert—check it out!
-                            </div>
-
-                            <div class='alert alert-danger' role='alert'>
-                                A simple danger alert—check it out!
-                            </div>
-
-                            <div class='alert alert-warning' role='alert'>
-                                A simple warning alert—check it out!
-                            </div>
-                        </div>
+                        <%- include('includes/messages'); %>
                     </div>
                 </div>
             </div>
@@ -41,37 +31,45 @@
             <div class='container'>
                 <div class='row'>
                     <div class='col-lg-8 mx-auto'>
-                        <div class='responsive-table'>
-                            <table class='table'>
-                                <tr>
-                                    <td>Fernanda</td>
-                                    <td>Oliveira</td>
-                                    <td>123456789</td>
-                                    <td>fernandaoliveira.rms@gmail.com</td>
-                                </tr>
+                        <% if(!user) { %>
+                            <div class='responsive-table'>
+                                <table class='table'>
+                                    <tr>
+                                        <td>Fernanda</td>
+                                        <td>Oliveira</td>
+                                        <td>123456789</td>
+                                        <td>fernandaoliveira.rms@gmail.com</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Fernanda</td>
+                                        <td>Oliveira</td>
+                                        <td>123456789</td>
+                                        <td>fernandaoliveira.rms@gmail.com</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Fernanda</td>
+                                        <td>Oliveira</td>
+                                        <td>123456789</td>
+                                        <td>fernandaoliveira.rms@gmail.com</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Fernanda</td>
+                                        <td>Oliveira</td>
+                                        <td>123456789</td>
+                                        <td>fernandaoliveira.rms@gmail.com</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        <% } else { %>
+                            <div class='buttons d-flex justify-content-center'>
+                                <button type='button' class='btn btn-primary'><a href='#'>Create Contact</a></button>
+                            </div>
+                        <% } %> 
 
-                                <tr>
-                                    <td>Fernanda</td>
-                                    <td>Oliveira</td>
-                                    <td>123456789</td>
-                                    <td>fernandaoliveira.rms@gmail.com</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Fernanda</td>
-                                    <td>Oliveira</td>
-                                    <td>123456789</td>
-                                    <td>fernandaoliveira.rms@gmail.com</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Fernanda</td>
-                                    <td>Oliveira</td>
-                                    <td>123456789</td>
-                                    <td>fernandaoliveira.rms@gmail.com</td>
-                                </tr>
-                            </table>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

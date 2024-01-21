@@ -1,7 +1,9 @@
 const User = require('../models/UserModel');
 
 exports.index = (req, res) => {
-    res.render('register');
+    if(req.session.user) return res.redirect('/login');
+
+    return res.render('register');
 }
 
 exports.register = async function(req, res) {
