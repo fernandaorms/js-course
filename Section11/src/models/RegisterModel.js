@@ -37,14 +37,10 @@ class Register {
         await this.userExists();
         if(this.errors.length > 0) return;
         
-        try {
-            const salt = bcryptjs.genSaltSync();
-            this.body.password = bcryptjs.hashSync(this.body.password, salt);
+        const salt = bcryptjs.genSaltSync();
+        this.body.password = bcryptjs.hashSync(this.body.password, salt);
 
-            this.user = await RegisterModel.create({ email: this.body.email, password: this.body.password });
-        } catch(e) { 
-            console.log(e);
-        }
+        this.user = await RegisterModel.create({ email: this.body.email, password: this.body.password });
     }
 
     async userExists() {
