@@ -31,7 +31,7 @@ exports.create = async function(req, res) {
 exports.updateIndex = async function(req, res) {
     if(!req.params.id) return res.render('404');
 
-    const contact = await Contact.contactExists(req.params.id);
+    const contact = await Contact.getContactById(req.params.id);
     if(!contact) return res.render('404');
 
     res.render('contact', { contact });

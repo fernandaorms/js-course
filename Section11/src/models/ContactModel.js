@@ -43,13 +43,6 @@ class Contact {
         this.contact = await ContactModel.findByIdAndUpdate(contact_id, this.body, { new: true });
     }
 
-    static async contactExists(contact_id) {
-        if(!mongoose.Types.ObjectId.isValid(contact_id)) return;
-        
-        const contact = await ContactModel.findById(contact_id);
-        return contact;
-    }
-
     cleanUp() {
         for(const key in this.body) {
            if(typeof this.body[key] !== 'string') {
@@ -77,6 +70,19 @@ class Contact {
 
         // User must fill at least one contact option
         if(!this.body.email && !this.body.phone ) this.errors.push('Please enter at least one contact information (Email or Phone).');
+    }
+
+    // Static Methods
+    static async getContactById(contact_id) {
+        if(!mongoose.Types.ObjectId.isValid(contact_id)) return;
+        
+        const contact = await ContactModel.findById(contact_id);
+        return contact;
+    }
+
+    static async getContactsByUserId(user_id) {
+        const contacts = await ContactModel.find({ user: user_id });
+        return contacts;
     }
 }
 
