@@ -1,0 +1,24 @@
+<% if (errors.length > 0 || success.length > 0) { %>
+
+
+<div class='flash-messages'>
+
+    <% if (errors.length > 0) { %>
+        <div class='alert alert-danger' role='alert'>
+            <% errors.forEach(element => { %>
+                 <span><%= element %></span>
+            <% }); %>
+         </div>
+    <% } %>
+
+    <% if (success.length > 0) { %>
+        <div class='alert alert-success' role='alert'>
+            <% success.forEach(element => { %>
+                 <span><%= element %></span>
+            <% }); %>
+         </div>
+    <% } %>
+   
+</div>
+
+<% } %>
