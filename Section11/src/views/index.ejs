@@ -21,39 +21,22 @@
             </div>
         </section>
 
+        <% const static_table = { first_name: 'Fernanda', last_name: 'Oliveira', email: 'fernandaoliveira.rms@gmail.com', phone: '123456789' } %>
+
         <section class='contacts mt-3 mb-3'>
             <div class='container'>
                 <div class='row'>
                     <div class='col-lg-8 mx-auto'>
                         <div class='responsive-table'>
                             <table class='table'>
-                                <tr>
-                                    <td>Fernanda</td>
-                                    <td>Oliveira</td>
-                                    <td>123456789</td>
-                                    <td>fernandaoliveira.rms@gmail.com</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Fernanda</td>
-                                    <td>Oliveira</td>
-                                    <td>123456789</td>
-                                    <td>fernandaoliveira.rms@gmail.com</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Fernanda</td>
-                                    <td>Oliveira</td>
-                                    <td>123456789</td>
-                                    <td>fernandaoliveira.rms@gmail.com</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Fernanda</td>
-                                    <td>Oliveira</td>
-                                    <td>123456789</td>
-                                    <td>fernandaoliveira.rms@gmail.com</td>
-                                </tr>
+                                <% for( let i = 0; i < 5; i++ ) { %>
+                                    <tr>
+                                        <td><%= static_table.first_name %></td>
+                                        <td><%= static_table.last_name %></td>
+                                        <td><%= static_table.email %></td>
+                                        <td><%= static_table.phone %></td>
+                                    </tr>
+                                <% } %>
                             </table>
                         </div>
                     </div>
