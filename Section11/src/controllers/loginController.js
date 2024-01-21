@@ -20,19 +20,15 @@ exports.login = async function(req, res) {
 
         if(user.errors.length > 0) {
             req.flash('errors', user.errors);
-
-            req.session.save(function() {
-                return res.redirect('/login');
-            });
+            
+            req.session.save(() => res.redirect('/login'));
             return;
         }
 
-        req.flash('success', 'Login Successful. Welcome to your contact\'s Agenda!');
+        req.flash('success', 'Login Successful. Welcome to your contacts Agenda!');
 
         req.session.user = user.user;
-        req.session.save(function() {
-            return res.redirect('/');
-        });
+        req.session.save(() => res.redirect('/'));
         return;
 
     } catch(e) {
