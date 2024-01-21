@@ -29,15 +29,30 @@
                     <div class='col-lg-8 mx-auto'>
                         <div class='responsive-table'>
                             <table class='table'>
-                                <% for( let i = 0; i < 5; i++ ) { %>
+                                <tr>
+                                    <td>First Name</td>
+                                    <td>Last Name</td>
+                                    <td>Email</td>
+                                    <td>Phone</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                
+                                <% for( let i = 0; i < 4; i++ ) { %>
                                     <tr>
                                         <td><%= static_table.first_name %></td>
                                         <td><%= static_table.last_name %></td>
                                         <td><%= static_table.email %></td>
                                         <td><%= static_table.phone %></td>
+                                        <td><a href='#'>Edit</a></td>
+                                        <td><a href='#' class='text-danger'>Delete</a></td>
                                     </tr>
                                 <% } %>
                             </table>
+                        </div>
+
+                        <div class='buttons d-flex justify-content-start'>
+                            <button type='button' class='btn btn-primary'><a href='/contact'>Create Contact</a></button>
                         </div>
                     </div>
                 </div>
