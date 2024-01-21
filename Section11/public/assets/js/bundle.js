@@ -59,7 +59,14 @@ button a:hover {
 .alert span {
     display: block;
     font-size: 14px;
-}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/style.css"],"names":[],"mappings":"AAGA;EACE,sBAAsB;EACtB,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,UAAU;EACV,mBAAmB;EACnB,oCAAoC;EACpC,eAAe;EACf,kBAAkB;AACpB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,2BAA2B;AAC/B;;AAEA;IACI,cAAc;IACd,qBAAqB;AACzB;;AAEA;IACI,cAAc;AAClB;;;AAGA,KAAK;;AAEL;IACI,cAAc;IACd,eAAe;AACnB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\n\n\n* {\n  box-sizing: border-box;\n  outline: 0;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: #f5f5f5;\n  font-family: 'Open sans', sans-serif;\n  font-size: 16px;\n  line-height: 1.5em;\n}\n\nh1 {\n    font-size: 2em;\n}\n\nlabel {\n    margin-bottom: 0 !important;\n}\n\nbutton a {\n    color: inherit;\n    text-decoration: none;\n}\n\nbutton a:hover {\n    color: inherit;\n}\n\n\n/*  */\n\n.alert span {\n    display: block;\n    font-size: 14px;\n}"],"sourceRoot":""}]);
+}
+
+
+/*  */
+
+button.logout {
+    max-width: 320px;
+}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/style.css"],"names":[],"mappings":"AAGA;EACE,sBAAsB;EACtB,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,UAAU;EACV,mBAAmB;EACnB,oCAAoC;EACpC,eAAe;EACf,kBAAkB;AACpB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,2BAA2B;AAC/B;;AAEA;IACI,cAAc;IACd,qBAAqB;AACzB;;AAEA;IACI,cAAc;AAClB;;;AAGA,KAAK;;AAEL;IACI,cAAc;IACd,eAAe;AACnB;;;AAGA,KAAK;;AAEL;IACI,gBAAgB;AACpB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\n\n\n* {\n  box-sizing: border-box;\n  outline: 0;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: #f5f5f5;\n  font-family: 'Open sans', sans-serif;\n  font-size: 16px;\n  line-height: 1.5em;\n}\n\nh1 {\n    font-size: 2em;\n}\n\nlabel {\n    margin-bottom: 0 !important;\n}\n\nbutton a {\n    color: inherit;\n    text-decoration: none;\n}\n\nbutton a:hover {\n    color: inherit;\n}\n\n\n/*  */\n\n.alert span {\n    display: block;\n    font-size: 14px;\n}\n\n\n/*  */\n\nbutton.logout {\n    max-width: 320px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
