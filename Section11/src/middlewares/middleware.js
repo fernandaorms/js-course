@@ -4,7 +4,7 @@ exports.globalMiddleware = (req, res, next) => {
     res.locals.user = req.session.user;
 
     next();
-}
+};
 
 exports.checkCsrfError = (err, req, res, next) => {
     if(err) {
@@ -12,9 +12,20 @@ exports.checkCsrfError = (err, req, res, next) => {
     }
 
     next();
-}
+};
 
 exports.csrfMiddleware = (req, res, next) => {
     res.locals.csrfToken = req.csrfToken();
     next();
-}
+};
+
+exports.loginRequired = (req, res, next) => {
+    if(!req.session.user) {
+        req.flash('errors', 'You need to log in to access this page.');
+        
+        req.session.save(() => res.redirect('/'));
+        return;
+    }
+
+    next();
+};
