@@ -21,7 +21,7 @@ exports.register = async function(req, res) {
     
         req.flash('success', 'Registration Successful. Login to access your Agenda!');
     
-        req.session.save(() => res.redirect('/register'));
+        req.session.save(() => res.redirect('/login'));
         return;
 
     } catch(e) {
