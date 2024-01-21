@@ -1,0 +1,51 @@
+<%- include('includes/header'); %>
+
+    <main>
+        <section class='hero mt-5 mb-5'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-lg-8 mx-auto'>
+                        <div class='introduction text-center'>
+                            <div class='title'>
+                                <h1>Create Contact</h1>
+                            </div>
+
+                            <div class='subtitle'>
+                                <p>Access <a href='./login'>Agenda</a> to see all of your contacts!</p>
+                            </div>
+                        </div>
+
+                        <%- include('includes/messages'); %>
+
+                        <form action='contact' method='post'>
+                            <input type='hidden' name='_csrf' value='<%= csrfToken %>'>
+
+                            <div class='mb-3'>
+                                <label for='inputFirstName' class='form-label'>First Name</label>
+                                <input type='text' class='form-control' id='inputFirstName' name='inputFirstName' />
+                            </div>
+
+                            <div class='mb-3'>
+                                <label for='inputLastName' class='form-label'>Last Name</label>
+                                <input type='text' class='form-control' id='inputLastName' name='inputLastName' />
+                            </div>
+
+                            <div class='mb-3'>
+                                <label for='inputEmail' class='form-label'>Email address</label>
+                                <input type='email' class='form-control' id='inputEmail' name='inputEmail'>
+                            </div>
+                            
+                            <div class='mb-3'>
+                                <label for='inputPhone' class='form-label'>Phone number</label>
+                                <input type='tel' class='form-control' id='inputPhone' name='inputPhone' />
+                            </div>
+
+                            <button type='submit' class='btn btn-primary'>Create Contact</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<%- include('includes/footer'); %>
