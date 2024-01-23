@@ -10,7 +10,7 @@ const path = require('path');
 const routes = require('./routes');
 const { globalMiddleware, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
 
-const PORT = 3002;
+const PORT = 3000;
 
 const app = express();
 
