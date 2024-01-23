@@ -49,9 +49,7 @@ var Form = /*#__PURE__*/function () {
       var el = e.target;
       this.validateEmail(el);
       this.validatePassword(el);
-
-      // if(!this.errors) el.submit();
-      if (!this.errors) alert('Submited');
+      if (!this.errors) el.submit();
     }
   }, {
     key: "validateEmail",
