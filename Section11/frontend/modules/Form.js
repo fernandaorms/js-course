@@ -27,8 +27,7 @@ export default class Form {
 
         this.validatePassword(el);
 
-        // if(!this.errors) el.submit();
-        if (!this.errors) alert('Submited');
+        if(!this.errors) el.submit();
     }
 
     validateEmail(el) {
