@@ -1,7 +1,7 @@
 const User = require('../models/UserModel');
 
 exports.index = (req, res) => {
-    if(req.session.user) return res.render('logged');
+    if(req.session.user) return res.redirect('/account');
 
     return res.render('login');
 }
