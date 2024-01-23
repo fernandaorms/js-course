@@ -33,7 +33,4 @@ exports.update = async function(req, res) {
         console.log(e);
         return res.render('404');
     }
-    
-
-    res.send(user);
 }
