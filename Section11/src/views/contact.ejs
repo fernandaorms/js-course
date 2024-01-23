@@ -17,7 +17,7 @@
 
                         <%- include('includes/messages'); %>
 
-                        <form action='/<%= (contact._id) ? `contact/${contact._id}` : 'contact' %>' method='post'>
+                        <form id='contact' action='/<%= (contact._id) ? `contact/${contact._id}` : 'contact' %>' method='post'>
                             <input type='hidden' name='_csrf' value='<%= csrfToken %>'>
 
                             <div class='mb-3'>
