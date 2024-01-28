@@ -18,4 +18,4 @@ This Is a Repository for saving my progress and solutions for the course 'JavaSc
 * [**Section 10:** JavaScript - Node, Npm, Express and MongoDB (NodeJS)](https://github.com/fernandaorms/js-course/tree/main/Section10)
 * [**Section 11:** JavaScript + Node - Agenda project (Express and MongoDB)](https://github.com/fernandaorms/agenda-nodejs)
 * **Section 12:** Linux - Application deploy and security + SSH Keys
-* [**Section 13:** REST API - JavaScript, Node and SQL (PostgreSQL)](https://github.com/fernandaorms/students-rest-api/tree/main)
+* [**Section 13:** REST API - JavaScript, Node and SQL (PostgreSQL)](https://github.com/fernandaorms/agenda-rest-api)
