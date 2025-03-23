@@ -23,4 +23,7 @@ This Is a Repository for saving my progress and solutions for the course 'JavaSc
 * [**Section 15:** React - Redux Saga - React Hooks and Functional Components (Advanced)](https://github.com/fernandaorms/agenda-reactjs)
 * [**Section 16:** React Router Dom v6](https://github.com/fernandaorms/js-course/tree/main/Section16)
 * [**Section 17:** Regular Expressions - Regex](https://github.com/fernandaorms/js-course/tree/main/Section17)
-* [**Section 18:** TypeScript - Instalation]
+* [**Section 18:** TypeScript - Instalation](https://github.com/fernandaorms/js-course/tree/main/Section18)
+* [**Section 19:** TypeScript - Basic Types](https://github.com/fernandaorms/js-course/tree/main/Section19)
+* [**Section 20:** TypeScript - Classes and Interfaces - OOP] - TBD
+* [**Section 21:** TypeScript - Advanced Types] - TBD
